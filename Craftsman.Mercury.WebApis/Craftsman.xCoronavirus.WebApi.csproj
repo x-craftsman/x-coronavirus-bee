@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Craftsman.Mercury.Domain\Craftsman.xCoronavirus.Domain.csproj" />
+    <ProjectReference Include="..\Craftsman.Mercury.Infrastructure\Craftsman.xCoronavirus.Infrastructure.csproj" />
+    <ProjectReference Include="..\Framework\Craftsman.Core\Craftsman.Core.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{00D45250-6570-4164-BF5D-1726B9F3389B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.Core", "Craftsman.Core\Craftsman.Core.csproj", "{7863A1BF-D2A8-4CDC-A1DB-E915974B67EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{664BA5F1-E002-4DAB-A3D5-B80D2609C9CB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7863A1BF-D2A8-4CDC-A1DB-E915974B67EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7863A1BF-D2A8-4CDC-A1DB-E915974B67EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7863A1BF-D2A8-4CDC-A1DB-E915974B67EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7863A1BF-D2A8-4CDC-A1DB-E915974B67EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7863A1BF-D2A8-4CDC-A1DB-E915974B67EB} = {00D45250-6570-4164-BF5D-1726B9F3389B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {241A0D86-6473-446A-8A83-FA573C55C6E7}
+	EndGlobalSection
+EndGlobal

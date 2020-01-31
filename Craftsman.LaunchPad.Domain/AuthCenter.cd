@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Craftsman.LaunchPad.Domain.AuthCenter.AuthFactory">
+    <Position X="3.25" Y="3.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="_authenticationCreator" Type="Craftsman.LaunchPad.Domain.AuthCenter.IUserAuthenticationCreator" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="3.25" />
+        <Point X="4.5" Y="1.375" />
+        <Point X="11.312" Y="1.375" />
+        <Point X="11.312" Y="1.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.373" Y="0.579" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_authorizationCreator" Type="Craftsman.LaunchPad.Domain.AuthCenter.IUserAuthorizationCreator" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="4.562" />
+        <Point X="9.5" Y="4.562" />
+        <Point X="9.5" Y="4" />
+        <Point X="10.938" Y="4" />
+        <Point X="10.938" Y="4.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.956" Y="-0.025" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_userInfoCreator" Type="Craftsman.LaunchPad.Domain.AuthCenter.IUserInfomationCreator" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.164" Y="5.493" />
+        <Point X="5.164" Y="5.868" />
+        <Point X="10.938" Y="5.868" />
+        <Point X="10.938" Y="6.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="2.612" Y="0.485" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAQAAAAEAAAIAAAAAAAAAAAAICAAAAAAQIAg=</HashCode>
+      <FileName>AuthCenter\Factories\AuthFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="_authenticationCreator" />
+      <Property Name="_authorizationCreator" />
+      <Property Name="_userInfoCreator" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Craftsman.LaunchPad.Domain.AuthCenter.LaunchPadAuthenticationCreator" Collapsed="true">
+    <Position X="11.5" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAA=</HashCode>
+      <FileName>AuthCenter\AuthenticationCreator\LaunchPadAuthenticationCreator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.LaunchPad.Domain.AuthCenter.NoAuthorizationCreator" Collapsed="true">
+    <Position X="11.25" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuthCenter\AuthorizationCreator\NoAuthorizationCreator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.LaunchPad.Domain.AuthCenter.Factories.LaunchPadAuthFactory" Collapsed="true">
+    <Position X="1.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAg=</HashCode>
+      <FileName>AuthCenter\Factories\LaunchPadAuthFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Craftsman.LaunchPad.Domain.AuthCenter.LaunchPadUserInfomationCreator" Collapsed="true">
+    <Position X="10.75" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>AuthCenter\UserInfomationCreator\LaunchPadUserInfomationCreator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Craftsman.LaunchPad.Domain.AuthCenter.IUserAuthenticationCreator" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>AuthCenter\AuthenticationCreator\IUserAuthenticationCreator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Craftsman.LaunchPad.Domain.AuthCenter.IUserAuthorizationCreator" Collapsed="true">
+    <Position X="9.75" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuthCenter\AuthorizationCreator\IUserAuthorizationCreator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Craftsman.LaunchPad.Domain.AuthCenter.IUserInfomationCreator" Collapsed="true">
+    <Position X="10" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>AuthCenter\UserInfomationCreator\IUserInfomationCreator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

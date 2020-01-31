@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="var factory = processFactoryCreator.Create(consumer);&#xD;&#xA;&#xD;&#xA;            //消息的解析&#xD;&#xA;            var messageResolver = factory.CreateMessageResolver();&#xD;&#xA;            var orgData = messageResolver.Parsing(consumer);&#xD;&#xA;&#xD;&#xA;            //映射逻辑&#xD;&#xA;            var dataMapper = factory.CreateDataMapper();&#xD;&#xA;            var targetData = dataMapper.MapperTo(orgData);&#xD;&#xA;&#xD;&#xA;            //调用处理程序&#xD;&#xA;            var processor = factory.CreateProcessor();&#xD;&#xA;            processor.SendData(targetData);">
+    <Position X="6.198" Y="7.469" Height="2.5" Width="6.752" />
+  </Comment>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.AbstractProcessFactory">
+    <Position X="2.75" Y="2" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAQACAAAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\AbstractProcessFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.ProcessFactoryCreator">
+    <Position X="0.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAABAAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\AbstractProcessFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.StandardScmApiProcessFactory">
+    <Position X="3.75" Y="4.25" Width="2.75" />
+    <AssociationLine Name="DataMapper" Type="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.IDataMapper" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.75" />
+        <Point X="6.875" Y="4.75" />
+        <Point X="6.875" Y="3.57" />
+        <Point X="10.5" Y="3.57" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="MessageResolver" Type="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.IMessageResolver" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.75" />
+        <Point X="6.875" Y="4.75" />
+        <Point X="6.875" Y="0.688" />
+        <Point X="10.5" Y="0.688" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Processor" Type="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.IProcessor" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.75" />
+        <Point X="10.25" Y="4.75" />
+        <Point X="10.25" Y="5.048" />
+        <Point X="11.875" Y="5.048" />
+        <Point X="11.875" Y="5.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAgAABAAAAAAAAAAAQACAEAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\StandardScmApiProcessFactory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DataMapper" />
+      <Property Name="MessageResolver" />
+      <Property Name="Processor" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.CommonOriginalData" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAEIAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\IOriginalData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.CommonTargetData" BaseTypeListCollapsed="true">
+    <Position X="1" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\ITargetData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.JsonMessageResolver" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\JsonMessageResolver.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.StandardScmApiProcessor" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="6.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAIAAAAAAAAAAIACAIAAAAAAAACAEAADAAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\SimpleField\StandardScmApiProcessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.ObjectFieldMapper" Collapsed="true">
+    <Position X="10.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAEAAAAAAAAAAAIAAAAIAAAAAAAAQAABABQQAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\SimpleField\ObjectFieldMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.TextScmApiProcessor" Collapsed="true">
+    <Position X="12.25" Y="6.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAIAAAAAAAAAAIACAIAAAAAAAACAEAAAAAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\SimpleField\TextScmApiProcessor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.TextScmApiProcessFactory">
+    <Position X="0.5" Y="4.25" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAgAABAAAAAAAAAAAQACAEAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\TextScmApiProcessFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.RowFieldMapper" Collapsed="true">
+    <Position X="12.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAAAAAAAAEAAAAAAAAAAAAIIAAAAAAAAQAAAABQAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\SimpleField\RowFieldMapper.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.IDataMapper">
+    <Position X="10.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\IDataMapper.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.IMessageResolver">
+    <Position X="10.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\IMessageResolver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.IOriginalData" Collapsed="true">
+    <Position X="1" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\IOriginalData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.IProcessor">
+    <Position X="10.5" Y="5.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\IProcessor.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Craftsman.Waiter.Domain.MessageConsumer.ExchangeData.ITargetData" Collapsed="true">
+    <Position X="3.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MessageConsumer\ExchangeData\ITargetData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

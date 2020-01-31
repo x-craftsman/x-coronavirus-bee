@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Framework", "00.Framework", "{00D45250-6570-4164-BF5D-1726B9F3389B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.Core", "Framework\Craftsman.Core\Craftsman.Core.csproj", "{4A3E9802-76B3-4176-8E20-153BE98B8707}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.Core.UnitTest", "Framework\Craftsman.Core.UnitTest\Craftsman.Core.UnitTest.csproj", "{0CE9C7BE-BEA4-4D29-8BFF-630DDBC05680}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Waiter", "03.Waiter", "{F14EF36C-A093-4976-97E9-FB714983D3E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.Waiter.WebUI", "Craftsman.Waiter.WebUI\Craftsman.Waiter.WebUI.csproj", "{CFCD7442-4BDE-4773-87B6-2451BE9C9823}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.Waiter.Domain", "Craftsman.Waiter.Domain\Craftsman.Waiter.Domain.csproj", "{3C665B27-ACF6-478D-A413-872CC0D5BFD5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.Waiter.Infrastructure", "Craftsman.Waiter.Infrastructure\Craftsman.Waiter.Infrastructure.csproj", "{69F91008-EDCC-41BB-BD06-3B576933662A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A3E9802-76B3-4176-8E20-153BE98B8707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3E9802-76B3-4176-8E20-153BE98B8707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3E9802-76B3-4176-8E20-153BE98B8707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3E9802-76B3-4176-8E20-153BE98B8707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CE9C7BE-BEA4-4D29-8BFF-630DDBC05680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CE9C7BE-BEA4-4D29-8BFF-630DDBC05680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CE9C7BE-BEA4-4D29-8BFF-630DDBC05680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CE9C7BE-BEA4-4D29-8BFF-630DDBC05680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFCD7442-4BDE-4773-87B6-2451BE9C9823}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFCD7442-4BDE-4773-87B6-2451BE9C9823}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFCD7442-4BDE-4773-87B6-2451BE9C9823}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFCD7442-4BDE-4773-87B6-2451BE9C9823}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C665B27-ACF6-478D-A413-872CC0D5BFD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C665B27-ACF6-478D-A413-872CC0D5BFD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C665B27-ACF6-478D-A413-872CC0D5BFD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C665B27-ACF6-478D-A413-872CC0D5BFD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69F91008-EDCC-41BB-BD06-3B576933662A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69F91008-EDCC-41BB-BD06-3B576933662A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69F91008-EDCC-41BB-BD06-3B576933662A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69F91008-EDCC-41BB-BD06-3B576933662A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A3E9802-76B3-4176-8E20-153BE98B8707} = {00D45250-6570-4164-BF5D-1726B9F3389B}
+		{0CE9C7BE-BEA4-4D29-8BFF-630DDBC05680} = {00D45250-6570-4164-BF5D-1726B9F3389B}
+		{CFCD7442-4BDE-4773-87B6-2451BE9C9823} = {F14EF36C-A093-4976-97E9-FB714983D3E5}
+		{3C665B27-ACF6-478D-A413-872CC0D5BFD5} = {F14EF36C-A093-4976-97E9-FB714983D3E5}
+		{69F91008-EDCC-41BB-BD06-3B576933662A} = {F14EF36C-A093-4976-97E9-FB714983D3E5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {241A0D86-6473-446A-8A83-FA573C55C6E7}
+	EndGlobalSection
+EndGlobal
