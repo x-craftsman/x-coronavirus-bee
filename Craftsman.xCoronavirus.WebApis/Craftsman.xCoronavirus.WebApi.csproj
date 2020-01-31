@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Craftsman.Mercury.Domain\Craftsman.xCoronavirus.Domain.csproj" />
-    <ProjectReference Include="..\Craftsman.Mercury.Infrastructure\Craftsman.xCoronavirus.Infrastructure.csproj" />
+    <ProjectReference Include="..\Craftsman.xCoronavirus.Domain\Craftsman.xCoronavirus.Domain.csproj" />
+    <ProjectReference Include="..\Craftsman.xCoronavirus.Infrastructure\Craftsman.xCoronavirus.Infrastructure.csproj" />
     <ProjectReference Include="..\Framework\Craftsman.Core\Craftsman.Core.csproj" />
   </ItemGroup>
 

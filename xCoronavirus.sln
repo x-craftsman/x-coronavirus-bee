@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.xCoronavirus.WebApi", "Craftsman.Mercury.WebApis\Craftsman.xCoronavirus.WebApi.csproj", "{C1DB2943-5428-4E1C-BEB3-8A82698E7699}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.xCoronavirus.WebApi", "Craftsman.xCoronavirus.WebApis\Craftsman.xCoronavirus.WebApi.csproj", "{C1DB2943-5428-4E1C-BEB3-8A82698E7699}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.xCoronavirus.Domain", "Craftsman.Mercury.Domain\Craftsman.xCoronavirus.Domain.csproj", "{01136D60-5E42-48C6-9AF8-5510C1E7998B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.xCoronavirus.Domain", "Craftsman.xCoronavirus.Domain\Craftsman.xCoronavirus.Domain.csproj", "{01136D60-5E42-48C6-9AF8-5510C1E7998B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.xCoronavirus.Infrastructure", "Craftsman.Mercury.Infrastructure\Craftsman.xCoronavirus.Infrastructure.csproj", "{A617840C-4FFB-4022-90CD-AECEE6902CF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Craftsman.xCoronavirus.Infrastructure", "Craftsman.xCoronavirus.Infrastructure\Craftsman.xCoronavirus.Infrastructure.csproj", "{A617840C-4FFB-4022-90CD-AECEE6902CF1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Mercury", "02.Mercury", "{C71511F1-3967-4D8A-A4E9-D814A5DEE1FF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.xCoronavirus", "02.xCoronavirus", "{C71511F1-3967-4D8A-A4E9-D814A5DEE1FF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Framework", "00.Framework", "{00D45250-6570-4164-BF5D-1726B9F3389B}"
 EndProject
