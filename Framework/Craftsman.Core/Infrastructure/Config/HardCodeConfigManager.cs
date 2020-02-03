@@ -18,7 +18,7 @@ namespace Craftsman.Core.Infrastructure.Config
             {
                 DataSource = "47.98.161.28",
                 Port = 3306,
-                InitialCatalog = "xcoronavirus",
+                InitialCatalog = "x_nCoV",
                 UserId = "root",
                 Password = "Craftsman@2020"
             };

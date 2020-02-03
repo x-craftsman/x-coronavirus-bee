@@ -8,8 +8,4 @@
     <ProjectReference Include="..\Framework\Craftsman.Core\Craftsman.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Contract\" />
-  </ItemGroup>
-
 </Project>

@@ -14,7 +14,7 @@ namespace Craftsman.Core.Web
         public Pagination()
         {
             PageNo = 1;
-            PageSize = 20;
+            PageSize = 9999;
             TotalPage = 1;
             TotalCount = 1;
         }
