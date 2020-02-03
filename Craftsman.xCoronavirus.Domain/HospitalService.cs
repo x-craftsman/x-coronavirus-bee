@@ -12,16 +12,20 @@ namespace Craftsman.xCoronavirus.Domain
 {
     public interface IHospitalService : IService
     {
-        Hospital CreateHospital(Hospital entity);
         List<Hospital> GetHospitals();
         List<Hospital> GetHospitals(string name);
         Hospital GetHospital(string id);
+
+        Hospital CreateHospital(Hospital entity);
+        Hospital UpdateHospital(Hospital entity);
         List<MaterialDemand> GetHospitalMedicalSupplies(string hospitalId);
+        MaterialDemand GetHospitalMedicalSupply(string hospitalId, string materialDemandId);
         MaterialDemand CreateHospitalMedicalSupply(string hospitalId, MaterialDemand entity);
         MaterialDemand UpdateHospitalMedicalSupply(string hospitalId, string materialDemandId, MaterialDemand entity);
         void DeleteHospitalMedicalSupply(string hospitalId, string materialDemandId);
 
         List<Contact> GetHospitalContacts(string hospitalId);
+        Contact GetHospitalContact(string hospitalId, string contactId);
         Contact CreateHospitalContact(string hospitalId, Contact entity);
         Contact UpdateHospitalContact(string hospitalId, string contactId, Contact entity);
         void DeleteHospitalContact(string hospitalId, string contactId);
@@ -40,9 +44,9 @@ namespace Craftsman.xCoronavirus.Domain
         {
             //Check
 
-            if (_repoHospital.ExistHospital(x => x.HospitalCode == entity.HospitalCode || x.Name == entity.Name))
+            if (_repoHospital.ExistHospital(x => x.Code == entity.Code || x.Name == entity.Name))
             {
-                throw new BusinessException($"已经存在同名或者代码（Code）相同的医院！Code = <{entity.HospitalCode}> , Name = <{entity.Name}>");
+                throw new BusinessException($"已经存在同名或者代码（Code）相同的医院！Code = <{entity.Code}> , Name = <{entity.Name}>");
             }
             //entity.Id = Guid.NewGuid().ToString();
 
@@ -55,6 +59,18 @@ namespace Craftsman.xCoronavirus.Domain
             //    contact.Id = Guid.NewGuid().ToString();
             //}
             return _repoHospital.CreateHospital(entity);
+        }
+        public Hospital UpdateHospital(Hospital entity)
+        {
+            if (entity == null)
+            {
+                throw new BusinessException($"医院信息不能为空！");
+            }
+            if (!_repoHospital.ExistHospital(x => x.Id == entity.Id))
+            {
+                throw new BusinessException($"医院信息不存在此Id的医院！id = <{entity.Id}>");
+            }
+            return _repoHospital.UpdateHospital(entity);
         }
         public List<Hospital> GetHospitals()
         {
@@ -77,6 +93,16 @@ namespace Craftsman.xCoronavirus.Domain
             return entity;
         }
         #region MaterialDemand
+        public MaterialDemand GetHospitalMedicalSupply(string hospitalId, string materialDemandId)
+        {
+            var hospital = GetHospital(hospitalId);
+            var materialDemand = hospital.MaterialDemands.FirstOrDefault(x => x.Id == materialDemandId);
+            if (materialDemand == null)
+            {
+                throw new BusinessException($"不存在对应的医院需求：hospitalId = <{hospitalId}> & materialDemandId = <{materialDemand.Id}>");
+            }
+            return materialDemand;
+        }
         public List<MaterialDemand> GetHospitalMedicalSupplies(string hospitalId)
         {
             var hospital = GetHospital(hospitalId);
@@ -97,7 +123,7 @@ namespace Craftsman.xCoronavirus.Domain
             for (var i = 0; i < hospital.MaterialDemands.Count; i++)
             {
                 materialDemand = hospital.MaterialDemands[i];
-                if (materialDemand.Id == materialDemandId)
+                if (materialDemand.Id.ToString() == materialDemandId)
                 {
                     hospital.MaterialDemands[i] = entity;
                     break;
@@ -109,7 +135,7 @@ namespace Craftsman.xCoronavirus.Domain
         public void DeleteHospitalMedicalSupply(string hospitalId, string materialDemandId)
         {
             var hospital = GetHospital(hospitalId);
-            var count = hospital.MaterialDemands.RemoveAll(x => x.Id == materialDemandId);
+            var count = hospital.MaterialDemands.RemoveAll(x => x.Id.ToString() == materialDemandId);
             if (count <= 0)
             {
                 throw new BusinessException("删除失败！");
@@ -119,6 +145,16 @@ namespace Craftsman.xCoronavirus.Domain
         #endregion MaterialDemand
 
         #region Contact
+        public Contact GetHospitalContact(string hospitalId, string contactId)
+        {
+            var hospital = GetHospital(hospitalId);
+            var contact = hospital.Contacts.FirstOrDefault(x => x.Id == contactId);
+            if (contact == null)
+            {
+                throw new BusinessException($"不存在对应的医院联系人：hospitalId = <{hospitalId}> & contactId = <{contact.Id}>");
+            }
+            return contact;
+        }
         public List<Contact> GetHospitalContacts(string hospitalId)
         {
             var hospital = GetHospital(hospitalId);

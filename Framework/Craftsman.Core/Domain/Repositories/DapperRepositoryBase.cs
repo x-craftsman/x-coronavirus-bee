@@ -56,7 +56,7 @@ namespace Craftsman.Core.Domain.Repositories
             CheckDbConnection();
 
             OpenDbConnection();
-            var key = _dbConnection.Insert(entity);
+            var key = _dbConnection.Insert<string, TEntity>(entity);
             var realEntity = _dbConnection.Get<TEntity>(key);
             CloseDbConnection();
 

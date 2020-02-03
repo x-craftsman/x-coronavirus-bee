@@ -12,7 +12,7 @@ namespace Craftsman.xCoronavirus.Domain.Entities
         /// <summary>
         /// 获取或设置 Id
         /// </summary>
-        [Key, Column("id")]
+        [Key, Required, Column("id")]
         public string Id { get; set; }
 
         public BaseEntity()

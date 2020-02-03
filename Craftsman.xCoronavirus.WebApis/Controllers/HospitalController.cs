@@ -39,9 +39,20 @@ namespace Craftsman.xCoronavirus.WebApis.Controllers
         #region Hospital
         // GET: api/hospitals
         [HttpGet]
-        public PagingDataRespone<Hospital> GetAllHospitals()
+        public PagingDataRespone<Hospital> GetAllHospitals(
+            [FromQuery]string name
+        )
         {
-            var data = _hospitalService.GetHospitals();
+            var data = new List<Hospital>();
+            if (string.IsNullOrEmpty(name))
+            {
+                data = _hospitalService.GetHospitals();
+            }
+            else
+            {
+                data = _hospitalService.GetHospitals(name);
+            }
+            
             return new PagingDataRespone<Hospital>() { Data = data, Pagination = new Pagination() };
         }
 
@@ -59,17 +70,18 @@ namespace Craftsman.xCoronavirus.WebApis.Controllers
             var objEntity = _hospitalService.CreateHospital(model);
             return Created("api/hospitals", objEntity);
         }
-        ///// <summary>
-        ///// 修改服务信息
-        ///// </summary>
-        ///// <param name="model"></param>
-        //[HttpPut("{id}")]
-        //public IActionResult UpdateHospital([FromRoute]int id, [FromBody]Hospital model)
-        //{
-        //    //var entity = ObjectMapper.Map<Tenant>(model);
-        //    var objEntity = _hospitalService.UpdateHospital(entity);
-        //    return Ok(objEntity);
-        //}
+        /// <summary>
+        /// 修改服务信息
+        /// </summary>
+        /// <param name="model"></param>
+        [HttpPut("{id}")]
+        public IActionResult UpdateHospital([FromRoute]string id, [FromBody]Hospital model)
+        {
+            //var entity = ObjectMapper.Map<Tenant>(model);
+            model.Id = id;
+            var objEntity = _hospitalService.UpdateHospital(model);
+            return Ok(objEntity);
+        }
         #endregion Hospital
 
         #region medical-supplies
@@ -79,6 +91,15 @@ namespace Craftsman.xCoronavirus.WebApis.Controllers
         {
             var data = _hospitalService.GetHospitalMedicalSupplies(hospitalId);
             return new PagingDataRespone<MaterialDemand>() { Data = data, Pagination = new Pagination() };
+        }
+        // GET: api/hospitals/{hospitalId}/medical-supplies
+        [HttpGet("{hospitalId}/medical-supplies/{materialDemandId}")]
+        public MaterialDemand GetHospitalMedicalSupply(
+            [FromRoute]string hospitalId,
+            [FromRoute]string materialDemandId)
+        {
+            var data = _hospitalService.GetHospitalMedicalSupply(hospitalId, materialDemandId);
+            return data;
         }
         // POST: api/hospitals/{hospitalId}/medical-supplies
         [HttpPost("{hospitalId}/medical-supplies")]
@@ -120,6 +141,15 @@ namespace Craftsman.xCoronavirus.WebApis.Controllers
         {
             var data = _hospitalService.GetHospitalContacts(hospitalId);
             return new PagingDataRespone<Contact>() { Data = data, Pagination = new Pagination() };
+        }
+        // GET: api/hospitals/{hospitalId}/contacts
+        [HttpGet("{hospitalId}/contacts/{contactId}")]
+        public Contact GetHospitalContact(
+            [FromRoute]string hospitalId,
+            [FromRoute]string contactId)
+        {
+            var data = _hospitalService.GetHospitalContact(hospitalId, contactId);
+            return data;
         }
         // POST: api/hospitals/{hospitalId}/contacts
         [HttpPost("{hospitalId}/contacts")]

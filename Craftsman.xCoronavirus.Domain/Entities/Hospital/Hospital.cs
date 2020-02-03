@@ -19,7 +19,7 @@ namespace Craftsman.xCoronavirus.Domain.Entities
         }
         #region Field
         [Column("hospital_code")]
-        public string HospitalCode { get; set; }
+        public string Code { get; set; }
         [Column("city")]
         public string City { get; set; }
         [Column("name")]
